@@ -9,6 +9,10 @@ public:
 	Stack(int s):size(s),top(0) {
 		arr = new T[size];
 	}
+	~ Stack(){
+		delete []arr;
+	}
+
 	void push(T val) {
 		if (top == size) {
 			cout << "Stack Overflow" << endl;
